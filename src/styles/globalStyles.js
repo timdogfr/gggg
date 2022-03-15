@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 // Used for wrapping a page component
 export const Body = styled.div`
-  background-image: url('config/images/bg.png') ;
+  /* background-image: url('config/images/bg.png') ;
   background-size: cover;
-  background-position: 100% 100%;
+  background-position: 100% 100%; */
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -62,7 +62,9 @@ export const AmountContainer = styled.div`
   align-items: ${({ ai }) => (ai ? ai : "flex-start")};
   width: ${({ wid }) => (wid ? wid+"%" : "100%")};
 
-
+  @media only screen and (max-width: 768px) {
+    margin: auto;
+  }
   
 `;
 
@@ -71,6 +73,9 @@ export const TextTitle = styled.p`
   font-size: ${({fs}) => fs ? fs+"rem" : "2.3rem"};
   line-height: 1.6;
   font-weight: 100;
+  @media only screen and (max-width: 768px) {
+    font-size:1.2rem;
+  }
 `;
 
 export const TextSubTitle = styled.p`
@@ -127,8 +132,9 @@ export const Mint = styled.div`
   width: 30%;
 
   @media screen and (max-width: 768px) {
-    width:95%;
+    width:100%;
     margin-top:-5vh;
+    padding:20px 10px 20px;
   }
 
 `;
@@ -171,6 +177,10 @@ export const FlexContainer = styled.div`
   flex-wrap:wrap;
   margin-top : ${({ mt }) => (mt ? mt : "0")};
 
+  @media only screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
+
 
 `;
 
@@ -208,7 +218,8 @@ export const maxButton = styled.button`
     position: relative;
     margin-left: auto;
     margin-bottom: 10px;
-   
+    font-size:1.0rem;
+    
   }
 
 

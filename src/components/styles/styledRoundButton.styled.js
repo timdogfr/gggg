@@ -18,4 +18,8 @@ export const StyledRoundButton = styled.button`
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
   }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;

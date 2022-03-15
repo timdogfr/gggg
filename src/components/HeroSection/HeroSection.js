@@ -10,9 +10,6 @@ function HeroSection() {
     return (
         <>
            <HeroContainer>
-                {/* <HeroBg>
-                    <ImageBg wid={100} src={"config/images/bg.png"} />
-                </HeroBg> */}
                 <HeroContent>
                 <ImageBg wid={40} src={"config/images/joking_jungle_cats.png"} />
                     <HeroP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt

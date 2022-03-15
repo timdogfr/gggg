@@ -116,7 +116,19 @@ const Navbar = () => {
           <NavMenu onClick={handleClick} click={click}>
               <NavItems>
                   <NavLink onClick={homeLink}  spy={true} smooth={true} offset={-80} duration={500}>Home</NavLink> 
-                </NavItems>
+              </NavItems>
+              <NavItems>
+                  <NavLink onClick={homeLink}  spy={true} smooth={true} offset={-80} duration={500}>About</NavLink> 
+              </NavItems>
+              <NavItems>
+                  <NavLink onClick={homeLink}  spy={true} smooth={true} offset={-80} duration={500}>Utilites</NavLink> 
+              </NavItems>
+              <NavItems>
+                  <NavLink onClick={homeLink}  spy={true} smooth={true} offset={-80} duration={500}>Team</NavLink> 
+              </NavItems>
+              <NavItems>
+                  <NavLink onClick={homeLink}  spy={true} smooth={true} offset={-80} duration={500}>Merch</NavLink> 
+              </NavItems>
               
                 {blockchain.account === "" || blockchain.smartContract === null ? (
                 <NavItems>

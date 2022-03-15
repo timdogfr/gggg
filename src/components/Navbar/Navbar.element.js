@@ -49,7 +49,7 @@ export const NavLogo = styled.img`
   transition: height 0.5s;
   padding-bottom:2vh;
   @media (min-width: 767px) {
-    width: 280px;
+    width: 240px;
     margin-top  : 40px;
   }`;
 
@@ -119,9 +119,9 @@ export const NavMenu = styled.ul`
     display:flex;
     cursor:pointer;
     font-family: 'wonder';
-    font-size:1.5rem;
+    font-size:1.2rem;
     &:hover{
-      color:#dbac36;
+      color:var(--primary);
     }
     &:active{
       border-bottom: 3px solid #01bf71;
@@ -200,7 +200,7 @@ export const NavMenu = styled.ul`
     justify-content:center;
     vertical-align:middle;
     margin:10px auto;
-    width:50px;
+    width:40px;
 
     @media screen and (max-width: 960px) {
       display:flex;

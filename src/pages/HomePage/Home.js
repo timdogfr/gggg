@@ -128,7 +128,7 @@ function Home() {
     getData();
   }, [blockchain.account]);
 
-  let countDownDate = new Date("Feb 12, 2022 20:00:00 GMT -6:00").getTime();
+  let countDownDate = new Date("Feb 18, 2022 20:00:00 GMT -6:00").getTime();
 
   let now = new Date().getTime();
 
@@ -174,13 +174,11 @@ function Home() {
 
             <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
            
-              <s.TextTitle fs={1.8} style={{
-                display:"inline-block",
-                }}>
+              <s.TextTitle fs={1.8} >
               AMOUNT
               </s.TextTitle>
 
-              <s.AmountContainer ai={"center"} jc={"center"} fd={"row"}>
+              <s.AmountContainer ai={"center"} jc={"center"} fd={"row"} >
                 <StyledRoundButton
                   style={{ lineHeight: 0.4 }}
                   disabled={claimingNft ? 1 : 0}
@@ -213,6 +211,7 @@ function Home() {
                   e.preventDefault();
                   maxNfts();
                 }}
+              
               >
                 MAX
               </s.maxButton>
