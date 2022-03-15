@@ -1,0 +1,25 @@
+:root {
+  --primary: #259c9a;
+  --primary-text: #1a1a1a;
+  --secondary: #5FCDE4;
+  --secondary-text: #ffffff;
+  --accent: #505050;
+  --accent-text: #ffffff;
+}
+
+body{
+  background-image: url('./images/bg.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body{
+    background-image: url('./images/mobileBg.png') !important; ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center ;
+  }
+}
