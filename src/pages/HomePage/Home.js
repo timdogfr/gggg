@@ -156,7 +156,6 @@ function Home() {
       <s.Body>
         <Navbar />
         <HeroSection />
-
         {days > -1 && hours > -1 && minutes > -1 && seconds > -1 && (
           <Countdown />
 
@@ -169,12 +168,12 @@ function Home() {
           mt={"12vh"}
         >
           <s.Mint>
-            <s.TextTitle fs={3} style={{ textAlign: "center" }}>MINT NFT</s.TextTitle>
+            <s.TextTitle fs={2.5} style={{ textAlign: "center" }}>MINT NFT</s.TextTitle>
             <s.SpacerLarge />
 
             <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
            
-              <s.TextTitle fs={1.8} >
+              <s.TextTitle fs={1.5} >
               AMOUNT
               </s.TextTitle>
 
@@ -220,8 +219,8 @@ function Home() {
             <s.Line />
             <s.SpacerLarge />
             <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
-              <s.TextTitle fs={1.8}>TOTAL</s.TextTitle>
-              <s.TextTitle fs={1.8} style={{ fontFamily: "wonder" }}>{displayCost} ETH</s.TextTitle>
+              <s.TextTitle fs={1.5}>TOTAL</s.TextTitle>
+              <s.TextTitle fs={1.5} style={{ fontFamily: "wonder" }}>{displayCost} ETH</s.TextTitle>
             </s.FlexContainer>
             <s.SpacerSmall />
            

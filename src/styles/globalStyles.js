@@ -73,8 +73,9 @@ export const TextTitle = styled.p`
   font-size: ${({fs}) => fs ? fs+"rem" : "2.3rem"};
   line-height: 1.6;
   font-weight: 100;
+  font-family: 'wonder';
   @media only screen and (max-width: 768px) {
-    font-size:1.2rem;
+    font-size:1.1rem;
   }
 `;
 
@@ -131,12 +132,18 @@ export const Mint = styled.div`
   border-radius:25px;
   width: 35%;
   margin: 0 auto;
-  @media only screen and (min-width: 768px) and (max-width: 1324px) {
+
+  @media only screen and (max-width: 1300px) {
     margin-top:15vh;
-    width:100%;
+    width:40%;
   }
 
-  @media screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) and (max-width: 960px) {
+    width:100%;
+    margin-top:15vh;
+  }
+
+  @media screen and (max-width: 767px) {
     width:100%;
     margin-top:15vh;
     padding:20px 10px 20px;
@@ -147,8 +154,8 @@ export const Mint = styled.div`
 export const CatDiv = styled.div`
   width:50%;
 
-  @media only screen and (min-width: 768px) and (max-width: 1324px) {
-    margin-top:-15vh;
+  @media only screen and (min-width: 768px) and (max-width: 960px) {
+    margin-top:35vh;
     width:100%;
   }
 

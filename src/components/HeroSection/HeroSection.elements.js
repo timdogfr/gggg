@@ -28,16 +28,7 @@ export const HeroBg = styled.div`
     height:100%;
     overflow:hidden;
 
-`;
-
-export const VideoBg = styled.video`
-    width:100%;
-    height:100%;
-    -o-object-fit:cover;
-    object-fit:cover;
-    background:#232a34;
-    opacity:0.5;
-`;  
+`; 
 
 export const ImageBg = styled.img`
     width:${({wid}) => (wid ? wid+"%" : "100%")};
@@ -49,7 +40,6 @@ export const ImageBg = styled.img`
 `;  
 
 export const HeroContent = styled.div`
-    z-index:3;
     max-width:1200px;
     position:absolute;
     padding:8px 24px;
