@@ -7,12 +7,12 @@
     "ID": 4
   },
   "NFT_NAME": "Goat Society",
-  "SYMBOL": "GS",
-  "MAX_SUPPLY": 3000,
+  "SYMBOL": "GSII",
+  "MAX_SUPPLY": 7010,
   "WEI_COST": 75000000000000000,
   "DISPLAY_COST": 0.075,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/mutant-age-camel-club",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/the-real-goat-society",
   "SHOW_BACKGROUND": true
 }

@@ -88,16 +88,16 @@ function Home() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 10) {
-      newMintAmount = 10;
+    if (newMintAmount > 6) {
+      newMintAmount = 6;
     }
     setMintAmount(newMintAmount);
     setDisplayCost(parseFloat(CONFIG.DISPLAY_COST * newMintAmount).toFixed(3));
   };
 
   const maxNfts = () => {
-    setMintAmount(10);
-    setDisplayCost(parseFloat(CONFIG.DISPLAY_COST * 10).toFixed(3));
+    setMintAmount(6);
+    setDisplayCost(parseFloat(CONFIG.DISPLAY_COST * 6).toFixed(3));
   };
 
   const getData = async () => {

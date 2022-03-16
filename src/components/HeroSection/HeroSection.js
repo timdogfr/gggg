@@ -12,8 +12,9 @@ function HeroSection() {
            <HeroContainer>
                 <HeroContent>
                 <ImageBg wid={40} src={"config/images/joking_jungle_cats.png"} />
-                    <HeroP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </HeroP>
+                    <HeroP>Season 1 set records. Season 2 is here!  </HeroP>
+                    <HeroP>Get GOATED & grow with the Greatest community in NFTs. Mint now to join the movement. </HeroP>
+                    <HeroP>Welcome to the HERD!</HeroP>
                 </HeroContent>
            </HeroContainer> 
         </>

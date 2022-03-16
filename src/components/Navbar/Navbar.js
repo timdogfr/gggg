@@ -95,16 +95,25 @@ const Navbar = () => {
     }
 
     const socialMedia = (url) =>{
-      window.location.href = url;
+      window.open(url, '_blank');
     }
 
     const homeLink = () =>{
-      window.location.replace("https://jokecommunity.io/")
+      window.open("https://goatsociety.io/", '_blank')
     }
 
-    const openSea = () =>{
-      window.location.replace("https://opensea.io/collection/mutant-age-camel-club")
+    const aboutLink = () =>{
+      window.open("https://goatsociety.io/#about", '_blank')
     }
+
+    const teamLink = () =>{
+      window.open("https://goatsociety.io/#team", '_blank')
+    }
+
+    const merchLink = () =>{
+      window.open("https://shop.goatsociety.io/",'_blank')
+    }
+
     return (
         <>
 
@@ -118,16 +127,13 @@ const Navbar = () => {
                   <NavLink onClick={homeLink}  spy={true} smooth={true} offset={-80} duration={500}>Home</NavLink> 
               </NavItems>
               <NavItems>
-                  <NavLink onClick={homeLink}  spy={true} smooth={true} offset={-80} duration={500}>About</NavLink> 
+                  <NavLink onClick={aboutLink}  spy={true} smooth={true} offset={-80} duration={500}>About</NavLink> 
               </NavItems>
               <NavItems>
-                  <NavLink onClick={homeLink}  spy={true} smooth={true} offset={-80} duration={500}>Utilites</NavLink> 
+                  <NavLink onClick={teamLink}  spy={true} smooth={true} offset={-80} duration={500}>Team</NavLink> 
               </NavItems>
               <NavItems>
-                  <NavLink onClick={homeLink}  spy={true} smooth={true} offset={-80} duration={500}>Team</NavLink> 
-              </NavItems>
-              <NavItems>
-                  <NavLink onClick={homeLink}  spy={true} smooth={true} offset={-80} duration={500}>Merch</NavLink> 
+                  <NavLink onClick={merchLink}  spy={true} smooth={true} offset={-80} duration={500}>Merch</NavLink> 
               </NavItems>
               
                 {blockchain.account === "" || blockchain.smartContract === null ? (
@@ -144,17 +150,12 @@ const Navbar = () => {
                 ) : ""}
 
                 <NavItems >
-                  <NavLink onClick={()=>socialMedia("https://instagram.com/joke.community")}>
+                  <NavLink onClick={()=>socialMedia("https://www.instagram.com/goatsocietynft/")}>
                     <NavIcon src={"config/images/instagram.png"}></NavIcon>
                   </NavLink>
                 </NavItems>
                 <NavItems >
-                  <NavLink onClick={()=> socialMedia("https://discord.gg/jc")}>
-                    <NavIcon src={"config/images/facebook.png"}></NavIcon>
-                  </NavLink>
-                </NavItems>
-                <NavItems >
-                  <NavLink onClick={()=>socialMedia("https://twitter.com/jokecommunity")}>
+                  <NavLink onClick={()=>socialMedia("https://twitter.com/goatsocietynft")}>
                     <NavIcon src={"config/images/twitter.png"}></NavIcon>
                   </NavLink>
 
