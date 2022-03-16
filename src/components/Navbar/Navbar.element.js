@@ -120,8 +120,8 @@ export const NavMenu = styled.ul`
     padding:0 1rem;
     display:flex;
     cursor:pointer;
-    font-family: 'wonder';
-    font-size:1.2rem;
+    /* font-family: 'wonder'; */
+    font-size:1.9rem;
     &:hover{
       color:var(--primary);
     }
@@ -130,7 +130,7 @@ export const NavMenu = styled.ul`
     }
 
     @media only screen and (min-width: 960px) {
-      font-size:0.8rem;
+      font-size:1.5rem;
   }
     
     @media screen and (max-width: 960px) {
@@ -151,21 +151,19 @@ export const NavMenu = styled.ul`
   export const StyledButton = styled.button`
     padding: 8px 22px;
     border-radius: 10px;
-    white-space: nowrap;
     height:40px;
-    outline: none;
-    border: none;
     color: #fff;
+    letter-spacing: 2px;
     margin-top:1.1vw;
     cursor: pointer;
+    border: none;
     transition: 0.5s all ease-in-out;
     font-size:1.2rem;
-    background:var(--primary);;
-    :active {
-      box-shadow: none;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-    }
+    width: auto;
+    background: var(--primary);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 100%, rgba(0,0,0,1) 100%);
+   
+
 
     @media only screen and (min-width: 768px) and (max-width: 1324px) {
     width:100%;

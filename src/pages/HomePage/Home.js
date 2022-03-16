@@ -205,7 +205,7 @@ function Home() {
               </s.AmountContainer>
 
               <s.maxButton
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer" , letterSpacing: "3px", }}
                 onClick={(e) => {
                   e.preventDefault();
                   maxNfts();
@@ -249,6 +249,7 @@ function Home() {
                     textAlign: "center",
                     color: "#fff",
                     cursor: "pointer",
+                    letterSpacing: "3px",
                   }}
                   onClick={(e) => {
                     e.preventDefault();
@@ -256,7 +257,7 @@ function Home() {
                     getData();
                   }}
                 >
-                  Connect Wallet
+                  CONNET WALLET
                 </s.connectButton>
               </s.Container>
             )}

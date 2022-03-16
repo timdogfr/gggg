@@ -138,10 +138,10 @@ export const Mint = styled.div`
     width:40%;
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 960px) {
+  /* @media only screen and (min-width: 768px) {
     width:100%;
     margin-top:15vh;
-  }
+  } */
 
   @media screen and (max-width: 767px) {
     width:100%;
@@ -154,10 +154,10 @@ export const Mint = styled.div`
 export const CatDiv = styled.div`
   width:50%;
 
-  @media only screen and (min-width: 768px) and (max-width: 960px) {
+  /* @media only screen and (min-width: 768px) and (max-width: 960px) {
     margin-top:35vh;
     width:100%;
-  }
+  } */
 
   @media screen and (max-width: 768px) {
     width:100%;
@@ -203,16 +203,16 @@ export const FlexContainer = styled.div`
 `;
 
 export const connectButton = styled.button`
-  width:70%;
+  width:auto;
   padding:10px;
   background: var(--primary);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 90%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 100%, rgba(0,0,0,1) 100%);
   color: #fff;
   display: flex;
   justify-content: center;
   text-align:center;
-  font-size:1.5rem;
-  border:1px solid var(--primary);
+  font-size:1.2rem;
+  border:2px solid var(--primary);
   border-radius:15px;
   border: none;
 
@@ -220,12 +220,12 @@ export const connectButton = styled.button`
 `;
 
 export const maxButton = styled.button`
-  width:20%;
+  width:auto;
   background: var(--primary);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 90%, rgba(0,0,0,1) 100%);
-  padding: 5px;
+  background: linear-gradient(0deg, rgba(34,193,195,1) 100%, rgba(0,0,0,1) 100%);
+  padding: 10px;
   border-radius:15px;
-  font-size:1.5rem;
+  font-size:1.2rem;
   color: #fff;
   font-weight: normal;
   text-align: center;
