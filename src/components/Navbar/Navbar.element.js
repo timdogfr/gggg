@@ -13,6 +13,7 @@ export const Nav= styled.nav`
   font-size: 1.3rem;
   clear: both;
   margin-top:-100px;
+  width: 100%;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -38,7 +39,7 @@ export const NavContainer= styled.div`
 
 
 export const NavLogo = styled.img`
-  width: 190px;
+  width: 80px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -48,9 +49,10 @@ export const NavLogo = styled.img`
   transition: width 0.5s;
   transition: height 0.5s;
   padding-bottom:2vh;
-  @media (min-width: 767px) {
-    width: 240px;
-    margin-top  : 40px;
+
+  @media only screen and (min-width: 767px) {
+    width: 90px;
+    margin-top  : 20px;
   }`;
 
   
@@ -126,11 +128,16 @@ export const NavMenu = styled.ul`
     &:active{
       border-bottom: 3px solid #01bf71;
     }
+
+    @media only screen and (min-width: 960px) {
+      font-size:0.8rem;
+  }
     
     @media screen and (max-width: 960px) {
       text-align:center;
       width:100%;
       display:table;
+      font-size:1.1rem;
     
       &:hover{
         color:#4b59f7;
@@ -159,6 +166,12 @@ export const NavMenu = styled.ul`
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
     }
+
+    @media only screen and (min-width: 768px) and (max-width: 1324px) {
+    width:100%;
+    font-size:0.7rem;
+    margin-top:2.2vh;
+  }
 
     @media screen and (max-width: 960px) {
       display:none;

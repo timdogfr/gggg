@@ -12,14 +12,15 @@ body{
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
+  background-color: #000000;
 }
 
 
 @media only screen and (max-width: 600px) {
-  body{
+  /* body{
     background-image: url('./images/mobileBg.png') !important; ;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center ;
-  }
+  } */
 }

@@ -129,23 +129,32 @@ export const Mint = styled.div`
   background-color: rgba(128, 128, 128, 0.1);
   border:1px solid #4b4b4b;
   border-radius:25px;
-  width: 30%;
+  width: 35%;
+  margin: 0 auto;
+  @media only screen and (min-width: 768px) and (max-width: 1324px) {
+    margin-top:15vh;
+    width:100%;
+  }
 
   @media screen and (max-width: 768px) {
     width:100%;
-    margin-top:-5vh;
+    margin-top:15vh;
     padding:20px 10px 20px;
   }
 
 `;
 
 export const CatDiv = styled.div`
-  display:block;
-  width:45%;
+  width:50%;
+
+  @media only screen and (min-width: 768px) and (max-width: 1324px) {
+    margin-top:-15vh;
+    width:100%;
+  }
 
   @media screen and (max-width: 768px) {
     width:100%;
-    margin-top:10px !important;
+    margin-top:-7vh !important;
   }
 
 `;
@@ -177,7 +186,9 @@ export const FlexContainer = styled.div`
   flex-wrap:wrap;
   margin-top : ${({ mt }) => (mt ? mt : "0")};
 
-  @media only screen and (max-width: 768px) {
+  
+
+  @media only screen and (max-width: 767px) {
     justify-content: space-between;
   }
 

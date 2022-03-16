@@ -163,10 +163,10 @@ function Home() {
         )}
 
         <s.FlexContainer
-          jc={"space-around"}
+          jc={"space-between"}
           ai={"center"}
           fd={"row"}
-          mt={"25vh"}
+          mt={"12vh"}
         >
           <s.Mint>
             <s.TextTitle fs={3} style={{ textAlign: "center" }}>MINT NFT</s.TextTitle>
@@ -263,12 +263,9 @@ function Home() {
             )}
 
           </s.Mint>
-          <s.Mint
-            style={{
-              backgroundColor: "none",
-              border: "none",
-              width: "0%"
-            }}></s.Mint>
+          <s.CatDiv  >
+          <s.Image src={"config/images/cat.png"} wid={100} />
+        </s.CatDiv>
         </s.FlexContainer>
       </s.Body>
     </>
