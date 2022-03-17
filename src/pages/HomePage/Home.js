@@ -171,7 +171,7 @@ function Home() {
             <s.TextTitle fs={2.5} style={{ textAlign: "center" }}>MINT NFT</s.TextTitle>
             <s.SpacerLarge />
 
-            <s.FlexContainer fd={"row"} ai={"center"} jc={"space-around"}>
+            <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
             <s.Inline>
               <s.Icon wid={18} src={"config/images/rectangle.png"} style={{position:"relative",display:"inline-block"}} />
               <s.TextTitle style={{display:"inline-block"}} fs={1.5} >

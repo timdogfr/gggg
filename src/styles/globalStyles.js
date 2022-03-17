@@ -130,7 +130,7 @@ export const Mint = styled.div`
 
   @media only screen and (max-width: 1300px) {
     margin-top:15vh;
-    width:50%;
+    width:45%;
   }
 
   /* @media only screen and (min-width: 768px) {
@@ -138,10 +138,11 @@ export const Mint = styled.div`
     margin-top:15vh;
   } */
 
-  @media screen and (max-width: 767px) {
-    width:100%;
-    margin-top:5vh;
+  @media screen and (max-width: 425px) {
+    width:85%;
+    margin:5vh auto;
     padding:20px 10px 20px;
+    border-radius: 5px;
   }
 
 `;
@@ -154,7 +155,7 @@ export const CatDiv = styled.div`
     width:100%;
   } */
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 425px) {
     width:100%;
     margin-top:-7vh !important;
   }
@@ -286,7 +287,7 @@ transition: height 0.5s;
 margin-top:20px;
 
 @media (max-width: 767px) {
-  width: 10%;
+  width: 18%;
   margin-top:0;
 
 }

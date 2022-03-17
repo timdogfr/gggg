@@ -1,8 +1,7 @@
 import styled from "styled-components";
 export const StyledRoundButton = styled.button`
-  padding: 10px;
   border: none;
-  padding: 10px;
+  padding: 20px;
   font-weight: bold;
   font-size: 1.8rem;
   color: var(--primary);
@@ -21,5 +20,6 @@ export const StyledRoundButton = styled.button`
 
   @media only screen and (max-width: 768px) {
     font-size: 1.2rem;
+    padding: 15px;
   }
 `;

@@ -35,6 +35,10 @@ export const NavContainer= styled.div`
   @media screen and (max-width: 960px) {
     transform: translateX(-52%);
   }
+  @media screen and (min-width: 960px) and (max-width: 1124px) {
+    justify-content: end;
+    padding: 0;
+  }
 `;
 
 
@@ -48,14 +52,14 @@ export const NavLogo = styled.img`
   transition: width 0.5s;
   transition: height 0.5s;
   padding-bottom:2vh;
-  float: right;
-  position: absolute;
+  
 
   @media only screen and (min-width: 767px) {
     width: 90px;
     margin-top  : 20px;
     margin-left: 24px;
   }`;
+
 
   
 export const MobileIcon = styled.div`
@@ -114,7 +118,7 @@ margin-left: 0;
 export const MobileMenu = styled.ul`
 display: flex;
 align-items: center;
-
+margin-right: 20px;
 @media only screen and (min-width: 960px) {
   display: none;
 }
@@ -127,6 +131,9 @@ align-items: center;
     height:80px;
     padding-left:24px;
     list-style: none;
+    @media screen and (min-width: 960px) {
+      padding: 0; 
+    }
     @media screen and (max-width: 960px) {
       height:0%;
       margin-top:9vh;
@@ -174,7 +181,9 @@ list-style: none;
     
     @media screen and (max-width: 960px) {
       text-align:center;
-      /* width:100%; */
+      width:100%;
+      padding: 0;
+      /* width: 80%; */
       display:table;
       font-size:1.1rem;
     
@@ -278,8 +287,6 @@ width: 80%;
   justify-content:flex-start;
   flex-direction:column;
   margin-top: 0;
-  margin-left: 8vh;
-  width: 50%;
 }
 `;
 
