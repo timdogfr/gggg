@@ -22,7 +22,7 @@ export const Nav= styled.nav`
 
 export const NavContainer= styled.div`
   display: flex;
-  justify-content:space-evenly;
+  justify-content:space-around;
   height: 100px;
   z-index: 1;
   width: 100%;
@@ -39,20 +39,22 @@ export const NavContainer= styled.div`
 
 
 export const NavLogo = styled.img`
-  width: 80px;
+  width: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin-left: 24px;
   margin-top  : 20px;
-  justify-self:flex-start;
+  justify-self:flex-end;
   transition: width 0.5s;
   transition: height 0.5s;
   padding-bottom:2vh;
+  float: right;
+  position: absolute;
 
   @media only screen and (min-width: 767px) {
     width: 90px;
     margin-top  : 20px;
+    margin-left: 24px;
   }`;
 
   
@@ -78,9 +80,7 @@ export const NavMenu = styled.ul`
   text-align: center;
   float: left;
   justify-content: flex-start;
-  margin-right: -22px;
- 
-
+  margin-left: 0;
   @media screen and (max-width: 960px) {
     display:flex;
     flex-direction:column;
@@ -97,6 +97,30 @@ export const NavMenu = styled.ul`
     
   }`;
 
+export const NavMenuRight = styled.ul`
+display: flex;
+align-items: center;
+list-style: none;
+text-align: center;
+float: right;
+justify-content: flex-start;
+margin-left: 0;
+@media only screen and (max-width: 960px) {
+  display: none;
+}
+`;
+
+
+export const MobileMenu = styled.ul`
+display: flex;
+align-items: center;
+
+@media only screen and (min-width: 960px) {
+  display: none;
+}
+`;
+
+
 
 
   export const NavItems = styled.li`
@@ -112,6 +136,20 @@ export const NavMenu = styled.ul`
     }
     `;
 
+
+export const MobileNavItems = styled.li`
+height:80px;
+
+list-style: none;
+@media screen and (max-width: 960px) {
+  height:35%;
+
+  &:hover{
+    border:none;
+  }
+}
+`;
+
   export const NavLink = styled(LinkS)`
     text-decoration:none;
     color:#fff;
@@ -120,6 +158,7 @@ export const NavMenu = styled.ul`
     padding:0 1rem;
     display:flex;
     cursor:pointer;
+    text-transform: uppercase;
     /* font-family: 'wonder'; */
     font-size:1.9rem;
     &:hover{
@@ -135,7 +174,7 @@ export const NavMenu = styled.ul`
     
     @media screen and (max-width: 960px) {
       text-align:center;
-      width:100%;
+      /* width:100%; */
       display:table;
       font-size:1.1rem;
     
@@ -211,14 +250,37 @@ export const NavMenu = styled.ul`
     justify-content:center;
     vertical-align:middle;
     margin:10px auto;
-    width:40px;
+    width: 80%;
+    padding: 0 !important;
 
     @media screen and (max-width: 960px) {
       display:flex;
       align-items:center;
-      justify-content:center;
+      justify-content:flex-start;
       flex-direction:column;
+      margin-top: 0;
+      
     }
   `;
+
+export const ConnectButtonImg = styled.img`
+display:flex;
+align-items:center;
+justify-content:center;
+vertical-align:middle;
+margin:20px auto;
+width: 80%;
+
+
+@media screen and (max-width: 960px) {
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  flex-direction:column;
+  margin-top: 0;
+  margin-left: 8vh;
+  width: 50%;
+}
+`;
 
 

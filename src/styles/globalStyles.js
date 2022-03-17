@@ -60,12 +60,7 @@ export const AmountContainer = styled.div`
   flex-direction: ${({ fd }) => (fd ? fd : "column")};
   justify-content: ${({ jc }) => (jc ? jc : "flex-start")};
   align-items: ${({ ai }) => (ai ? ai : "flex-start")};
-  width: ${({ wid }) => (wid ? wid+"%" : "100%")};
-
-  @media only screen and (max-width: 768px) {
-    margin: auto;
-  }
-  
+  width: ${({ wid }) => (wid ? wid+"%" : "100%")};  
 `;
 
 export const TextTitle = styled.p`
@@ -130,12 +125,12 @@ export const Mint = styled.div`
   background-color: rgba(128, 128, 128, 0.1);
   border:1px solid #4b4b4b;
   border-radius:25px;
-  width: 35%;
+  position: relative;
   margin: 0 auto;
 
   @media only screen and (max-width: 1300px) {
     margin-top:15vh;
-    width:40%;
+    width:50%;
   }
 
   /* @media only screen and (min-width: 768px) {
@@ -145,7 +140,7 @@ export const Mint = styled.div`
 
   @media screen and (max-width: 767px) {
     width:100%;
-    margin-top:15vh;
+    margin-top:5vh;
     padding:20px 10px 20px;
   }
 
@@ -173,12 +168,56 @@ export const Image = styled.img`
   margin-top:20px;
   display:block;
   margin:0 auto;
+  padding-right:10px;
   @media (max-width: 767px) {
     width: 100%;
     margin-top:0;
 
   }
 `;  
+
+export const Icon = styled.img`
+  width: ${({ wid }) => (wid ? wid+"%" : "100%")};
+  transition: width 0.5s;
+  transition: height 0.5s;
+  margin-top:20px;
+  display:block;
+  margin:0 auto;
+  padding-right:10px;
+  &::after{
+    content:'';
+    display:block;
+   
+
+  }
+  @media (max-width: 767px) {
+    width: 20%;
+    margin-top:0;
+
+  }
+`;
+
+
+export const connectButtonImage = styled.img`
+  width: ${({ wid }) => (wid ? wid+"%" : "100%")};
+  transition: width 0.5s;
+  transition: height 0.5s;
+  margin-top:20px;
+  display:block;
+  margin:0 auto;
+  padding-right:10px;
+  &::after{
+    content:'';
+    display:block;
+   
+
+  }
+  @media (max-width: 767px) {
+    width: 50%;
+    margin-top:0;
+
+  }
+`;
 
 export const Line = styled.hr`
   width:100%;
@@ -206,7 +245,7 @@ export const connectButton = styled.button`
   width:auto;
   padding:10px;
   background: var(--primary);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 100%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(360deg, rgba(37,156,154,1) 58%, rgba(23,22,22,1) 88%, rgba(37,156,154,1) 95%);
   color: #fff;
   display: flex;
   justify-content: center;
@@ -238,23 +277,21 @@ export const maxButton = styled.button`
     margin-bottom: 10px;
     font-size:1.0rem;
     
-  }
+  }`;
 
+export const maxButtonImage = styled.img`
+width: ${({ wid }) => (wid ? wid+"%" : "100%")};
+transition: width 0.5s;
+transition: height 0.5s;
+margin-top:20px;
 
-`;
+@media (max-width: 767px) {
+  width: 10%;
+  margin-top:0;
 
+}
+`; 
 
-export const Layout = styled.div`
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
-  
-  
-  
-
+export const Inline = styled.div`
+  display:inline-block; 
 `;

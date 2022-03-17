@@ -162,7 +162,7 @@ function Home() {
         )}
 
         <s.FlexContainer
-          jc={"space-between"}
+          jc={"center"}
           ai={"center"}
           fd={"row"}
           mt={"12vh"}
@@ -171,13 +171,15 @@ function Home() {
             <s.TextTitle fs={2.5} style={{ textAlign: "center" }}>MINT NFT</s.TextTitle>
             <s.SpacerLarge />
 
-            <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
-           
-              <s.TextTitle fs={1.5} >
+            <s.FlexContainer fd={"row"} ai={"center"} jc={"space-around"}>
+            <s.Inline>
+              <s.Icon wid={18} src={"config/images/rectangle.png"} style={{position:"relative",display:"inline-block"}} />
+              <s.TextTitle style={{display:"inline-block"}} fs={1.5} >
               AMOUNT
               </s.TextTitle>
+            </s.Inline>
 
-              <s.AmountContainer ai={"center"} jc={"center"} fd={"row"} >
+              <s.AmountContainer ai={"center"} jc={"center"} fd={"row"} style={{width:"15%",marginRight:"5vw"}} >
                 <StyledRoundButton
                   style={{ lineHeight: 0.4 }}
                   disabled={claimingNft ? 1 : 0}
@@ -189,7 +191,7 @@ function Home() {
                   -
                 </StyledRoundButton>
                 <s.SpacerMedium />
-                <s.TextDescription color={"#259c9a"} size={"1.8rem"}>
+                <s.TextDescription color={"#fff"} size={"1.8rem"}>
                   {mintAmount}
                 </s.TextDescription>
                 <s.SpacerMedium />
@@ -203,8 +205,13 @@ function Home() {
                   +
                 </StyledRoundButton>
               </s.AmountContainer>
+              <s.maxButtonImage wid={15} src={"config/images/max.png"}  style={{ cursor: "pointer" }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  maxNfts();
+                }} />
 
-              <s.maxButton
+              {/* <s.maxButton
                 style={{ cursor: "pointer" , letterSpacing: "3px", }}
                 onClick={(e) => {
                   e.preventDefault();
@@ -213,14 +220,18 @@ function Home() {
               
               >
                 MAX
-              </s.maxButton>
+              </s.maxButton> */}
             </s.FlexContainer>
             <s.SpacerSmall />
             <s.Line />
             <s.SpacerLarge />
             <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
-              <s.TextTitle fs={1.5}>TOTAL</s.TextTitle>
+              <s.Inline>
+              <s.Icon wid={22} src={"config/images/rectangle.png"} style={{position:"relative",display:"inline-block"}} />
+              <s.TextTitle style={{display:"inline-block"}} fs={1.5} >TOTAL</s.TextTitle>
+              </s.Inline>
               <s.TextTitle fs={1.5} style={{ fontFamily: "wonder" }}>{displayCost} ETH</s.TextTitle>
+              
             </s.FlexContainer>
             <s.SpacerSmall />
            
@@ -244,7 +255,15 @@ function Home() {
             ) : (
              
               <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                <s.connectButton
+              <s.connectButtonImage style={{
+                    color: "#fff", cursor: "pointer",
+                  }} 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    dispatch(connect());
+                    getData();
+                  }} src={"config/images/connectwallet.png"} wid={50} />
+                {/* <s.connectButton
                   style={{
                     textAlign: "center",
                     color: "#fff",
@@ -257,14 +276,14 @@ function Home() {
                     getData();
                   }}
                 >
-                  CONNET WALLET
-                </s.connectButton>
+                  CONNECT WALLET
+                </s.connectButton> */}
               </s.Container>
             )}
 
           </s.Mint>
           <s.CatDiv  >
-          <s.Image src={"config/images/cat.png"} wid={100} />
+          <s.Image  src={"config/images/cat.png"} wid={100} />
         </s.CatDiv>
         </s.FlexContainer>
       </s.Body>

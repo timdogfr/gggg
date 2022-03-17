@@ -15,7 +15,7 @@ body{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   /* body{
     background-image: url('./images/mobileBg.png') !important; ;
     background-repeat: no-repeat;
