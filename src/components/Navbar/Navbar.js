@@ -16,7 +16,7 @@ import {
   NavIcon,
   NavMenuRight,
   ConnectButtonImg,
-  MobileMenu,MobileNavItems
+  MobileMenu,MobileNavItems,NavLinkMobile
 } from './Navbar.element'
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from "react-icons/lib";
@@ -117,6 +117,11 @@ const Navbar = () => {
     window.open("https://shop.goatsociety.io/", '_blank')
   }
 
+  const utilitiesink = () => {
+    window.open("https://shop.goatsociety.io/#utilities", '_blank')
+  }
+
+
   return (
     <>
 
@@ -133,6 +138,9 @@ const Navbar = () => {
               <NavLink onClick={aboutLink} spy={true} smooth={true} offset={-80} duration={500}>About Us</NavLink>
             </NavItems>
             <NavItems>
+              <NavLink onClick={utilitiesink} spy={true} smooth={true} offset={-80} duration={500}>Utilities</NavLink>
+            </NavItems>
+            <NavItems>
               <NavLink onClick={teamLink} spy={true} smooth={true} offset={-80} duration={500}>Team</NavLink>
             </NavItems>
             <NavItems>
@@ -143,26 +151,32 @@ const Navbar = () => {
           <NavMenuRight>
           {blockchain.account === "" || blockchain.smartContract === null ? (
             <NavItems>
-          <ConnectButtonImg src={"config/images/connect.png"} alt={"connect"} />
-              {/* <StyledButton
-                onClick={(e) => {
-                  e.preventDefault();
-                  dispatch(connect());
-                  getData();
-                }}
-              >CONNECT</StyledButton> */}
+            <NavLinkMobile style={{
+                    cursor: "pointer",
+                  }} 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    dispatch(connect());
+                    getData();
+                  }} >
+          <ConnectButtonImg src={"config/images/connectButton.png"} alt={"connect"} />
+          </NavLinkMobile>
             </NavItems>
           ) : ""}
-
           <NavItems >
-            <NavLink onClick={() => socialMedia("https://www.instagram.com/goatsocietynft/")}>
-              <NavIcon src={"config/images/instagram.png"}></NavIcon>
-            </NavLink>
+            <NavLinkMobile onClick={() => socialMedia("https://discord.com/invite/goatsociety")}>
+              <NavIcon src={"config/images/discord.png"}></NavIcon>
+            </NavLinkMobile>
           </NavItems>
           <NavItems >
-            <NavLink onClick={() => socialMedia("https://twitter.com/goatsocietynft")}>
+            <NavLinkMobile onClick={() => socialMedia("https://www.instagram.com/goatsocietynft/")}>
+              <NavIcon src={"config/images/instagram.png"}></NavIcon>
+            </NavLinkMobile>
+          </NavItems>
+          <NavItems >
+            <NavLinkMobile onClick={() => socialMedia("https://twitter.com/goatsocietynft")}>
               <NavIcon src={"config/images/twitter.png"}></NavIcon>
-            </NavLink>
+            </NavLinkMobile>
           </NavItems>
 
           </NavMenuRight>
@@ -171,10 +185,25 @@ const Navbar = () => {
               <MobileMenu>
               {blockchain.account === "" || blockchain.smartContract === null ? (
             <MobileNavItems>
-          <ConnectButtonImg src={"config/images/connect.png"} alt={"connect"} />
+            <NavLink style={{
+                    cursor: "pointer",
+                  }} 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    dispatch(connect());
+                    getData();
+                  }}>
+          <ConnectButtonImg  src={"config/images/connectButton.png"} alt={"connect"} />
+          </NavLink>
             </MobileNavItems>
           ) : ""}
 
+
+          <MobileNavItems >
+            <NavLinkMobile onClick={() => socialMedia("https://discord.com/invite/goatsociety")}>
+              <NavIcon src={"config/images/discord.png"}></NavIcon>
+            </NavLinkMobile>
+          </MobileNavItems>
           <MobileNavItems >
             <NavLink onClick={() => socialMedia("https://www.instagram.com/goatsocietynft/")}>
               <NavIcon src={"config/images/instagram.png"}></NavIcon>

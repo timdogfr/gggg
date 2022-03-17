@@ -65,13 +65,15 @@ export const HeroH1 = styled.h1`
 
 export const HeroP = styled.p`
     margin-top:14px;
-    font-size:1.6rem;
-    color:#fff;
+    font-size:1.1rem;
+    color:#c5c5c5;
     text-align:center;
     width:90%;
+    font-family: 'wonder';
+    line-height: 1.5rem;
 
     @media screen and (max-width: 768px) {
-        font-size:14px !important;
+        font-size:12px !important;
     }
     @media screen and (max-width: 480px) {
         font-size:13px;

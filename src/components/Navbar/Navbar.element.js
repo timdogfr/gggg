@@ -195,6 +195,42 @@ list-style: none;
     `;
 
 
+export const NavLinkMobile = styled(LinkS)`
+text-decoration:none;
+color:#fff;
+align-items:center;
+height:100%;
+display:flex;
+cursor:pointer;
+text-transform: uppercase;
+/* font-family: 'wonder'; */
+font-size:1.9rem;
+&:hover{
+  color:var(--primary);
+}
+&:active{
+  border-bottom: 3px solid #01bf71;
+}
+
+@media only screen and (min-width: 960px) {
+  font-size:1.5rem;
+}
+
+@media screen and (max-width: 960px) {
+  text-align:center;
+  width:100%;
+  padding: 0;
+  /* width: 80%; */
+  display:table;
+  font-size:1.1rem;
+
+  &:hover{
+    color:#4b59f7;
+    transition: all 0.5s ease;
+    }
+}
+`;
+
 
   export const StyledButton = styled.button`
     padding: 8px 22px;
