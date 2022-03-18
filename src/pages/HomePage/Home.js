@@ -128,7 +128,7 @@ function Home() {
     getData();
   }, [blockchain.account]);
 
-  let countDownDate = new Date("Mar 18, 2022 19:50:00 GMT +5:00").getTime();
+  let countDownDate = new Date("Mar 18, 2022 20:00:00 GMT -5:00").getTime();
 
   let now = new Date().getTime();
 
@@ -226,6 +226,9 @@ function Home() {
                 MAX
               </s.maxButton> */}
             </s.FlexContainer>
+            <s.TextSubTitle style={{marginTop:"10px"}} size={0.9}  align={"right"} >
+            Max 6
+          </s.TextSubTitle>
             <s.SpacerSmall />
             <s.Line />
             <s.SpacerLarge />
