@@ -214,17 +214,6 @@ function Home() {
                   e.preventDefault();
                   maxNfts();
                 }} />
-
-              {/* <s.maxButton
-                style={{ cursor: "pointer" , letterSpacing: "3px", }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  maxNfts();
-                }}
-              
-              >
-                MAX
-              </s.maxButton> */}
             </s.FlexContainer>
             <s.TextSubTitle style={{marginTop:"10px"}} size={0.9}  align={"right"} >
             Max 6 PER TRANSACTION
@@ -241,7 +230,6 @@ function Home() {
               
             </s.FlexContainer>
             <s.SpacerSmall />
-           
             <s.SpacerSmall />
 
             {blockchain.account !== "" && blockchain.smartContract !== null && blockchain.errorMsg === "" ? (
@@ -255,12 +243,11 @@ function Home() {
                   }}
                 >
                   {" "}
-                  {claimingNft ? "Confirm Transaction in Wallet" : "Mint"}{" "}
+                  {claimingNft ? "Confirm Transaction in Wallet" : "Mint Now"}{" "}
                   {mintDone ? feedback : ""}{" "}
                 </s.connectButton>{" "}
               </s.Container>
             ) : (
-             
               <s.Container ai={"center"} jc={"center"} fd={"row"}>
               <s.connectButtonImage style={{
                     color: "#fff", cursor: "pointer",
@@ -270,21 +257,6 @@ function Home() {
                     dispatch(connect());
                     getData();
                   }} src={"config/images/connectwallet.png"} wid={50} />
-                {/* <s.connectButton
-                  style={{
-                    textAlign: "center",
-                    color: "#fff",
-                    cursor: "pointer",
-                    letterSpacing: "3px",
-                  }}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    dispatch(connect());
-                    getData();
-                  }}
-                >
-                  CONNECT WALLET
-                </s.connectButton> */}
               </s.Container>
             )}
 
