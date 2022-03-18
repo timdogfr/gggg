@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-   height: 100%;
-  width: 100%;
+  min-height: 120vh;
+  max-width: 120vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -20,8 +20,7 @@ export const Wrapper = styled.div`
   color: #fff;
   color: #fff4cf;
   font-family: "wonder";
-
-  
+  z-index: 11;
   
 `;
 
