@@ -128,7 +128,7 @@ function Home() {
     getData();
   }, [blockchain.account]);
 
-  let countDownDate = new Date("Mar 18, 2022 20:00:00 GMT -5:00").getTime();
+  let countDownDate = new Date("Mar 18, 2022 19:50:00 GMT +5:00").getTime();
 
   let now = new Date().getTime();
 
