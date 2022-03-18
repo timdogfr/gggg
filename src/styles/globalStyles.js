@@ -140,7 +140,7 @@ export const Mint = styled.div`
 
   @media screen and (max-width: 425px) {
     width:85%;
-    margin:5vh auto;
+    margin:15vh auto;
     padding:20px 10px 20px;
     border-radius: 5px;
   }
