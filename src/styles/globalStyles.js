@@ -79,7 +79,6 @@ export const TextSubTitle = styled.p`
   font-size: ${({size}) => size ? size+"rem" : "1.5rem"};
   font-family: 'wonder';
   text-align:${({align}) => align ? align : "center"};
-  color: #000;
 `;
 
 export const TextDescription = styled.p`

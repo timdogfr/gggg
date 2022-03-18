@@ -128,7 +128,7 @@ function Home() {
     getData();
   }, [blockchain.account]);
 
-  let countDownDate = new Date("Mar 18, 2022 20:00:00 GMT -6:00").getTime();
+  let countDownDate = new Date("Mar 18, 2022 20:00:00 GMT -5:00").getTime();
 
   let now = new Date().getTime();
 
@@ -169,8 +169,12 @@ function Home() {
         >
           <s.Mint>
             <s.TextTitle fs={2.5} style={{ textAlign: "center" }}>MINT NFT</s.TextTitle>
+           
+            <s.TextSubTitle col={"#fff"} size={1.1}>
+              {7010 - supply} of 7010 NFT's Available
+            </s.TextSubTitle>
             <s.SpacerLarge />
-
+            <s.SpacerLarge />
             <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
             <s.Inline>
               <s.Icon wid={18} src={"config/images/rectangle.png"} style={{position:"relative",display:"inline-block"}} />
