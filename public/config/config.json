@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0x1578cd610c7aE61A1805918374eA8EE5Ac2a5207",
-  "SCAN_LINK": "https://etherscan.io/address/0x35043d11D31346D005b848E3cd7998707FF7EE27",
+  "CONTRACT_ADDRESS": "0x41231dadda96380c114e75e0da8a2b207d9232c2",
+  "SCAN_LINK": "https://etherscan.io/address/0x41231dadda96380c114e75e0da8a2b207d9232c2",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
   "NFT_NAME": "Goat Society",
   "SYMBOL": "GSII",
