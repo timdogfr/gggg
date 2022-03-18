@@ -238,25 +238,30 @@ font-size:1.9rem;
     height:40px;
     color: #fff;
     letter-spacing: 2px;
-    margin-top:1.1vw;
     cursor: pointer;
     border: none;
     transition: 0.5s all ease-in-out;
     font-size:1.2rem;
     width: auto;
     background: var(--primary);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 100%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 100%, rgba(0,0,0,1) 100%);
    
 
 
     @media only screen and (min-width: 768px) and (max-width: 1324px) {
     width:100%;
     font-size:0.7rem;
-    margin-top:2.2vh;
   }
 
     @media screen and (max-width: 960px) {
-      display:none;
+      width: 100%;
+      padding: 2px 11px;
+      height:24px;
+      font-size:0.7rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+      display: none;
     }
 
   `;

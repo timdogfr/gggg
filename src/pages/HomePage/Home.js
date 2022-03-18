@@ -23,7 +23,7 @@ function Home() {
   const [supply, setTotalSupply] = useState(0);
   const [feedback, setFeedback] = useState("Install MetaMask");
   const [mintAmount, setMintAmount] = useState(1);
-  const [displayCost, setDisplayCost] = useState(0.03);
+  const [displayCost, setDisplayCost] = useState(0.075);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
@@ -227,7 +227,7 @@ function Home() {
               </s.maxButton> */}
             </s.FlexContainer>
             <s.TextSubTitle style={{marginTop:"10px"}} size={0.9}  align={"right"} >
-            Max 6
+            Max 6 PER TRANSACTION
           </s.TextSubTitle>
             <s.SpacerSmall />
             <s.Line />

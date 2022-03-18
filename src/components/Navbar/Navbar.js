@@ -16,7 +16,7 @@ import {
   NavIcon,
   NavMenuRight,
   ConnectButtonImg,
-  MobileMenu,MobileNavItems,NavLinkMobile
+  MobileMenu, MobileNavItems, NavLinkMobile
 } from './Navbar.element'
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from "react-icons/lib";
@@ -24,6 +24,8 @@ import { animateScroll as scroll } from "react-scroll";
 
 import * as s from "../../styles/globalStyles";
 
+const truncate = (input, len) =>
+  input.length > len ? `${input.substring(0, len)}...${input.substring(input.length-5,input.length)}` : input;
 
 const Navbar = () => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -35,12 +37,6 @@ const Navbar = () => {
     }
 
   }
-
-  useEffect(() => {
-    window.addEventListener('scroll', changeNav)
-  }, [])
-
-
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
@@ -67,6 +63,7 @@ const Navbar = () => {
   });
 
   const getData = () => {
+    console.log(blockchain.account);
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
       dispatch(fetchData(blockchain.account));
     }
@@ -149,75 +146,91 @@ const Navbar = () => {
           </NavMenu>
 
           <NavMenuRight>
-          {blockchain.account === "" || blockchain.smartContract === null ? (
-            <NavItems>
-            <NavLinkMobile style={{
-                    cursor: "pointer",
-                  }} 
+            {blockchain.account === "" || blockchain.smartContract === null ? (
+              <NavItems>
+                <NavLinkMobile style={{
+                  cursor: "pointer",
+                }}
                   onClick={(e) => {
                     e.preventDefault();
                     dispatch(connect());
                     getData();
                   }} >
-          <ConnectButtonImg src={"config/images/connectButton.png"} alt={"connect"} />
-          </NavLinkMobile>
+                  <ConnectButtonImg src={"config/images/connectButton.png"} alt={"connect"} />
+                </NavLinkMobile>
+              </NavItems>
+            ) : ""}
+
+            {blockchain.account !== null ? (
+              <NavItems>
+                <NavLinkMobile>
+                <StyledButton>{truncate(blockchain.account, 7)}</StyledButton>
+                </NavLinkMobile>
+              </NavItems>
+            ) : ""}
+            <NavItems >
+              <NavLinkMobile onClick={() => socialMedia("https://discord.com/invite/goatsociety")}>
+                <NavIcon src={"config/images/discord.png"}></NavIcon>
+              </NavLinkMobile>
             </NavItems>
-          ) : ""}
-          <NavItems >
-            <NavLinkMobile onClick={() => socialMedia("https://discord.com/invite/goatsociety")}>
-              <NavIcon src={"config/images/discord.png"}></NavIcon>
-            </NavLinkMobile>
-          </NavItems>
-          <NavItems >
-            <NavLinkMobile onClick={() => socialMedia("https://www.instagram.com/goatsocietynft/")}>
-              <NavIcon src={"config/images/instagram.png"}></NavIcon>
-            </NavLinkMobile>
-          </NavItems>
-          <NavItems >
-            <NavLinkMobile onClick={() => socialMedia("https://twitter.com/goatsocietynft")}>
-              <NavIcon src={"config/images/twitter.png"}></NavIcon>
-            </NavLinkMobile>
-          </NavItems>
+            <NavItems >
+              <NavLinkMobile onClick={() => socialMedia("https://www.instagram.com/goatsocietynft/")}>
+                <NavIcon src={"config/images/instagram.png"}></NavIcon>
+              </NavLinkMobile>
+            </NavItems>
+            <NavItems >
+              <NavLinkMobile onClick={() => socialMedia("https://twitter.com/goatsocietynft")}>
+                <NavIcon src={"config/images/twitter.png"}></NavIcon>
+              </NavLinkMobile>
+            </NavItems>
 
           </NavMenuRight>
 
 
-              <MobileMenu>
-              {blockchain.account === "" || blockchain.smartContract === null ? (
-            <MobileNavItems>
-            <NavLink style={{
-                    cursor: "pointer",
-                  }} 
+          <MobileMenu>
+            {blockchain.account === "" || blockchain.smartContract === null ? (
+              <MobileNavItems>
+                <NavLink style={{
+                  cursor: "pointer",
+                }}
                   onClick={(e) => {
                     e.preventDefault();
                     dispatch(connect());
                     getData();
                   }}>
-          <ConnectButtonImg  src={"config/images/connectButton.png"} alt={"connect"} />
-          </NavLink>
+                  <ConnectButtonImg src={"config/images/connectButton.png"} alt={"connect"} />
+                </NavLink>
+              </MobileNavItems>
+            ) : ""}
+
+            {blockchain.account !== null || blockchain.smartContract !== null ? (
+              <MobileNavItems>
+                <NavLink>
+                <StyledButton>{truncate(blockchain.account, 7)}</StyledButton>
+                </NavLink>
+              </MobileNavItems>
+            ) : ""}
+
+
+            <MobileNavItems >
+              <NavLinkMobile onClick={() => socialMedia("https://discord.com/invite/goatsociety")}>
+                <NavIcon src={"config/images/discord.png"}></NavIcon>
+              </NavLinkMobile>
             </MobileNavItems>
-          ) : ""}
+            <MobileNavItems >
+              <NavLink onClick={() => socialMedia("https://www.instagram.com/goatsocietynft/")}>
+                <NavIcon src={"config/images/instagram.png"}></NavIcon>
+              </NavLink>
+            </MobileNavItems>
+            <MobileNavItems >
+              <NavLink onClick={() => socialMedia("https://twitter.com/goatsocietynft")}>
+                <NavIcon src={"config/images/twitter.png"}></NavIcon>
+              </NavLink>
+            </MobileNavItems>
+          </MobileMenu>
 
 
-          <MobileNavItems >
-            <NavLinkMobile onClick={() => socialMedia("https://discord.com/invite/goatsociety")}>
-              <NavIcon src={"config/images/discord.png"}></NavIcon>
-            </NavLinkMobile>
-          </MobileNavItems>
-          <MobileNavItems >
-            <NavLink onClick={() => socialMedia("https://www.instagram.com/goatsocietynft/")}>
-              <NavIcon src={"config/images/instagram.png"}></NavIcon>
-            </NavLink>
-          </MobileNavItems>
-          <MobileNavItems >
-            <NavLink onClick={() => socialMedia("https://twitter.com/goatsocietynft")}>
-              <NavIcon src={"config/images/twitter.png"}></NavIcon>
-            </NavLink>
-          </MobileNavItems>
-              </MobileMenu>
-          
 
-         
 
           <MobileIcon onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
