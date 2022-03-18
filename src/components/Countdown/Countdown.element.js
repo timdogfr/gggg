@@ -20,7 +20,6 @@ export const Wrapper = styled.div`
   color: #fff;
   color: #fff4cf;
   font-family: "wonder";
-  z-index: 11;
   
 `;
 
