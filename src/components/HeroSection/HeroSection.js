@@ -13,7 +13,6 @@ function HeroSection() {
                 <HeroContent>
                 <ImageBg wid={40} src={"config/images/joking_jungle_cats.png"} />
                     <HeroP>Season 1 set records. Season 2 is here!  Get GOATED & grow with the Greatest community in NFTs. Mint now to join the movement. Welcome to the HERD! </HeroP>
-                    <HeroP style={{ color: "#259c9a" }}>Whitelist is Closed & Public Minting Opens At 9:00 AM EST </HeroP>
                 </HeroContent>
            </HeroContainer> 
         </>
