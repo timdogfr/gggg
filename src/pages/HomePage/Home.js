@@ -166,6 +166,7 @@ function Home() {
           ai={"center"}
           fd={"row"}
           mt={"12vh"}
+          style={{ marginTop: 120 }}
         >
           <s.Mint>
             <s.TextTitle fs={2.5} style={{ textAlign: "center" }}>MINT NFT</s.TextTitle>
