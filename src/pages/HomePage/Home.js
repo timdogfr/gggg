@@ -23,7 +23,7 @@ function Home() {
   const [supply, setTotalSupply] = useState(0);
   const [feedback, setFeedback] = useState("Install MetaMask");
   const [mintAmount, setMintAmount] = useState(1);
-  const [displayCost, setDisplayCost] = useState(0.075);
+  const [displayCost, setDisplayCost] = useState(0.05);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
