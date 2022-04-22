@@ -1,14 +1,14 @@
 {
-  "CONTRACT_ADDRESS": "0x41231dadda96380c114e75e0da8a2b207d9232c2",
-  "SCAN_LINK": "https://etherscan.io/address/0x41231dadda96380c114e75e0da8a2b207d9232c2",
+  "CONTRACT_ADDRESS": "0xCE6699ecFF493343CB9Cd082De3267Cb59C3903e",
+  "SCAN_LINK": "https://testnet.snowtrace.io/address/0xCE6699ecFF493343CB9Cd082De3267Cb59C3903e",
   "NETWORK": {
-    "NAME": "Ethereum",
-    "SYMBOL": "ETH",
-    "ID": 1
+    "NAME": "Avalanche FUJI C-Chain",
+    "SYMBOL": "AVAX",
+    "ID": 43113
   },
-  "NFT_NAME": "Goat Society",
-  "SYMBOL": "GSII",
-  "MAX_SUPPLY": 7010,
+  "NFT_NAME": "ToppemSports",
+  "SYMBOL": "TMSPRTS",
+  "MAX_SUPPLY": 10000,
   "WEI_COST": 50000000000000000,
   "DISPLAY_COST": 0.05,
   "GAS_LIMIT": 285000,
